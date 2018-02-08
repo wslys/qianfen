@@ -1,0 +1,24 @@
+{
+    "name"  : "zhenxiong/qianfen",
+    "type"  : "project",
+    "keywords": ["qianfen", "zhenxiong"],
+    "homepage": "http://qianfen.com",
+    "license" : "MIT",
+    "require": {
+        "workerman/gateway-worker" : ">=3.0.0",
+        "clue/redis-react": "^2.2",
+        "workerman/mysql": "^1.0"
+    },
+    "config": {
+        "secure-http": true
+    },
+    "autoload": {
+        "psr-4": {
+            "Core\\": "Core/",
+            "App\\IM\\": "Applications/IM/",
+            "App\\Model\\": "Applications/Model/",
+            "App\\Game\\": "Applications/Game/",
+            "App\\Actions\\": "Applications/Actions/"
+        }
+    }
+}

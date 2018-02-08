@@ -1,0 +1,22 @@
+[
+  {
+    "act" : "login",
+    "data" : {
+      "open_id" : "open_id1"
+    }
+  },
+
+  {
+    "act" : "register",
+    "data" : {
+      "open_id": "open_id1",
+      "nick_name": "nick_name1",
+      "avatar_url": "avatar_url1",
+      "gender": "1",
+      "city": "city1",
+      "province": "province1",
+      "country": "country1",
+      "language": "zh-CN"
+    }
+  }
+]

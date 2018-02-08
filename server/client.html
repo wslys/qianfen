@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="https://cdn.bootcss.com/bootstrap/4.0.0/css/bootstrap.css" rel="stylesheet">
+    <link href="https://cdn.bootcss.com/bootstrap/4.0.0/css/bootstrap-grid.css" rel="stylesheet">
+    <link href="https://cdn.bootcss.com/bootstrap/4.0.0/css/bootstrap-reboot.css" rel="stylesheet">
+
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.js"></script>
+    <script src="https://cdn.bootcss.com/bootstrap/4.0.0/js/bootstrap.js"></script>
+    <script src="https://cdn.bootcss.com/bootstrap/4.0.0/js/bootstrap.bundle.js"></script>
+</head>
+<body>
+<div class="container">
+    <div class="row" id="receive_data_box" style="height: 450px;overflow:auto;"></div>
+    <form>
+        <div class="form-group">
+            <input class="form-control" id="send_data" placeholder="send_data">
+        </div>
+
+        <button type="button" class="btn btn-default">发 送</button>
+    </form>
+</div>
+
+
+
+<script type="text/javascript">
+    ws = new WebSocket("ws://127.0.0.1:7272");
+    ws.onopen = function() {
+        ws.send('{"act":"login","data":"你好， 我这里是JSON数据"}');
+    };
+    ws.onmessage = function(e) {
+        console.log(e.data);
+        var htmlTmp = '<p class="text-primary">' + e.data + '</p><br/>';
+        $('#receive_data_box').append(htmlTmp);
+    };
+    $('.btn-default').click(function () {
+        var send_data = $('#send_data').val();
+        ws.send('{"act":"login","data":"你好， 我这里是JSON数据"}');
+    });
+</script>
+</body>
+</html>
