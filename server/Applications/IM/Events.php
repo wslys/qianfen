@@ -71,6 +71,7 @@ class Events
     public static function onWorkerStart($worker)
     {
         self::$game = new Game(); // 实例化游戏空间
+
         // 实例化Db
         // self::$db = Db::instance('chat');
         if (!isset(DbConfig::$db_conf)) {
@@ -92,7 +93,6 @@ class Events
     public static function onMessage($client_id, $message)
     {
         $data = json_decode($message, true);
-        var_dump($data);
 
         switch ($data['act']) {
             case 'login':

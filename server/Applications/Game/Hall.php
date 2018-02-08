@@ -12,5 +12,7 @@ namespace App\Game;
 
 class Hall
 {
-
+    // 我的数据
+    // 活跃者
+    // 风云榜
 }

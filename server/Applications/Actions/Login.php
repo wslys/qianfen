@@ -62,7 +62,7 @@ class Login {
         $_SESSION['create_at']  = $user['create_at'];
         $_SESSION['update_at']  = $user['update_at'];
 
-        // 玩家状态, 1：登陆游戏、 2：准备中、 3：游戏中
+        // 玩家状态, 1：登陆游戏、 2：匹配中、 3：准备中、 4：游戏中
         $_SESSION['player_status'] = 0;
 
         Gateway::sendToUid($user['id'], json_encode([
