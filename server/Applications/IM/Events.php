@@ -29,6 +29,7 @@ use App\Game\Game;
 use App\Model\Init;
 use Config\Db as DbConfig;
 use GatewayWorker\Lib\Gateway;
+use Workerman\Lib\Timer;
 use Workerman\MySQL\Connection;
 use GatewayWorker\Lib\Db;
 use App\Actions\Login;
@@ -83,6 +84,11 @@ class Events
 
         // init model
         Init::init();
+
+        // TODO 监控游戏空间的状态：如匹配，开始，通知等......
+        Timer::add(3, function(){
+            self::$game->start();
+        });
     }
 
     /**

@@ -66,7 +66,7 @@ The red team*/
     public function start() {
         echo "\n game start go go go go >>>>>> \n";
         $this->get_matching_user_list();
-        $this->matching();
+        //$this->matching();
     }
 
     /**
@@ -101,6 +101,8 @@ The red team*/
                 $this->matching_user_list[$client_id] = $client_session;
             }
         }
+
+        var_dump($this->matching_user_list);
     }
 }
 
