@@ -37,7 +37,7 @@ class Login {
         return;
     }
 
-    public static function auth_login($data, $client_id) {
+    public static function auth_login($client_id, $data) {
         // 检查是否受过权
 
         // 未授权需要添加用户信息
