@@ -72,6 +72,7 @@ class Events
     /**
      * 进程启动后初始化数据库连接
      * @param $worker
+     * @throws Exception
      */
     public static function onWorkerStart($worker)
     {
