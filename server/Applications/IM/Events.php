@@ -25,9 +25,12 @@
  */
 namespace App\IM;
 
+use App\Actions\Player;
+use APP\Actions\Room;
 use App\Game\Game;
 use App\Model\Init;
 use Config\Db as DbConfig;
+use Couchbase\Exception;
 use GatewayWorker\Lib\Gateway;
 use Workerman\Lib\Timer;
 use Workerman\MySQL\Connection;
@@ -82,7 +85,7 @@ class Events
         self::$db_conf = DbConfig::$db_conf;
         self::$db = new Connection(self::$db_conf['host'], self::$db_conf['port'], self::$db_conf['user'], self::$db_conf['password'], self::$db_conf['dbname'], self::$db_conf['charset']);
 
-        // init model
+        // init model TODO 初始化Model
         Init::init();
 
         // TODO 监控游戏空间的状态：如匹配，开始，通知等......
@@ -95,6 +98,7 @@ class Events
      * 有消息时
      * @param int $client_id
      * @param mixed $message
+     * @throws \Exception
      */
     public static function onMessage($client_id, $message)
     {
@@ -102,23 +106,31 @@ class Events
 
         switch ($data['act']) {
             case 'login':
-                Login::login(['open_id'=>$data['data']['open_id']], $client_id);
+                Login::login($client_id, ['open_id'=>$data['data']['open_id']]);
                 break;
             case 'logout':
                 Login::logout($client_id);
                 break;
             case 'register':
-                Login::register($data['data'], $client_id);
+                Login::register($client_id, $data['data']);
                 break;
             case 'create_room':
+                Room::createdRoom($client_id, $data);
                 break;
             case 'in_room':
+                Room::inRoom($client_id, $data);
                 break;
             case 'out_room':
+                Room::outRoom($client_id, $data);
                 break;
             case 'ready':
+                Player::ready($client_id, $data);;
                 break;
             case 'start_game':
+                Player::startGame($client_id, $data);
+                break;
+            case 'end_game':
+                Player::endGame($client_id, $data);
                 break;
         }
     }

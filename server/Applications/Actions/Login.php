@@ -6,7 +6,7 @@ use App\Model\User;
 use GatewayWorker\Lib\Gateway;
 
 class Login {
-	public static function login($data, $client_id) {
+	public static function login($client_id, $data) {
 		$user = User::findOne(['open_id'=>$data['open_id']]);
 		if (!$user) {
 			Msg::error($client_id, '登陆失败,请重试！');
@@ -20,7 +20,7 @@ class Login {
         Gateway::closeClient($client_id);
     }
 
-	public static function register($data, $client_id) {
+	public static function register($client_id, $data) {
         $user = User::findOne(['open_id'=>$data['open_id']]);
         if ($user) {
             self::success($user, $client_id);
@@ -46,7 +46,7 @@ class Login {
     }
 
 
-    private static function success($user, $client_id) {
+    private static function success($client_id, $user) {
         Gateway::bindUid($client_id, $user['id']);
 
         $_SESSION['uid']        = $user['id'];

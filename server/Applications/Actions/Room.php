@@ -19,7 +19,7 @@ class Room
      * @param $data
      * @param $client_id
      */
-    public static function createdRoom($data, $client_id) {
+    public static function createdRoom($client_id, $data) {
         $time = date('Y-m-d H:i:s');
 
         if (!isset($_SESSION['uid'])) { // not login
@@ -64,7 +64,7 @@ class Room
      * @return bool
      * @throws \Exception
      */
-    public static function inRoom($data, $client_id) {
+    public static function inRoom($client_id, $data) {
         $room_id = $data['room_id'];
         $room    = ModelRoom::findOne($room_id);
         if (!$room) {
@@ -99,10 +99,9 @@ class Room
             ]
         ];
         Gateway::sendToGroup($room_id, json_encode($send_data));
-        return false;
     }
 
-    public static function outRoom($data, $client_id) {
+    public static function outRoom($client_id, $data) {
         $room_id = $data['data']['room_id'];
         $room    = ModelRoom::findOne($room_id);
         if (!$room) {
@@ -130,7 +129,7 @@ class Room
      * @param $data
      * @param $client_id
      */
-    public static function ready($data, $client_id) {
+    public static function ready($client_id, $data) {
         // 检查自己是参与游戏者还是观众
     }
 
@@ -139,7 +138,7 @@ class Room
      * @param $data
      * @param $client_id
      */
-    public static function startGame($data, $client_id) {
+    public static function startGame($client_id, $data) {
         // 检查4位玩家是否都已经处于准备状态
     }
 }

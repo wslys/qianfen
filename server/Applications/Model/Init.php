@@ -11,6 +11,9 @@ namespace App\Model;
 
 class Init
 {
+    /**
+     * TODO 初始化Model  [User, Room ...... ]
+     */
     public static function init(){
         User::init();
         Room::init();

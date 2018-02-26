@@ -2356,3 +2356,300 @@ Stack trace:
 2018-02-08 17:53:57 pid:13655 worker[ChatBusinessWorker:14880] exit with status 9
 2018-02-08 17:54:56 pid:13655 Workerman[start.php] reloading
 2018-02-08 17:54:58 pid:13655 worker[ChatBusinessWorker:14899] exit with status 9
+2018-02-08 18:00:09 pid:13655 Workerman[start.php] reloading
+2018-02-08 18:00:11 pid:13655 worker[ChatBusinessWorker:14922] exit with status 9
+2018-02-08 18:00:29 pid:13655 Workerman[start.php] reloading
+2018-02-08 18:00:31 pid:13655 worker[ChatBusinessWorker:15073] exit with status 9
+2018-02-08 18:00:54 pid:13655 Workerman[start.php] reloading
+2018-02-08 18:00:56 pid:13655 worker[ChatBusinessWorker:15091] exit with status 9
+2018-02-08 18:00:56 pid:15102 Error: Class 'App\IM\Timer' not found in /home/user/www/qianfen/server/Applications/IM/Events.php:87
+Stack trace:
+#0 [internal function]: App\IM\Events::onWorkerStart(Object(GatewayWorker\BusinessWorker))
+#1 /home/user/www/qianfen/server/vendor/workerman/gateway-worker/src/BusinessWorker.php(211): call_user_func('\\App\\IM\\Events:...', Object(GatewayWorker\BusinessWorker))
+#2 [internal function]: GatewayWorker\BusinessWorker->onWorkerStart(Object(GatewayWorker\BusinessWorker))
+#3 /home/user/www/qianfen/server/vendor/workerman/workerman/Worker.php(2081): call_user_func(Array, Object(GatewayWorker\BusinessWorker))
+#4 /home/user/www/qianfen/server/vendor/workerman/gateway-worker/src/BusinessWorker.php(190): Workerman\Worker->run()
+#5 /home/user/www/qianfen/server/vendor/workerman/workerman/Worker.php(1294): GatewayWorker\BusinessWorker->run()
+#6 /home/user/www/qianfen/server/vendor/workerman/workerman/Worker.php(1127): Workerman\Worker::forkOneWorkerForLinux(Object(GatewayWorker\BusinessWorker))
+#7 /home/user/www/qianfen/server/vendor/workerman/workerman/Worker.php(1100): Workerman\Worker::forkWorkersForLinux()
+#8 /home/user/www/qianfen/server/vendor/workerman/workerman/Worker.php(1426): Workerman\Worker::forkWorkers()
+#9 /home/user/www/qianfen/server/vendor/workerman/workerman/Worker.php(1375): Workerman\Worker::monitorWorkersForLinux()
+#10 /home/user/www/qianfen/server/vendor/workerman/workerman/Worker.php(461): Workerman\Worker::monitorWorkers()
+#11 /home/user/www/qianfen/server/Core/Application.php(24): Workerman\Worker::runAll()
+#12 /home/user/www/qianfen/server/vendor/bootstrap.php(20): Core\Application::run()
+#13 /home/user/www/qianfen/server/start.php(12): require('/home/user/www/...')
+#14 {main}
+2018-02-08 18:00:57 pid:15102 Worker process terminated
+2018-02-08 18:00:57 pid:13655 worker[ChatBusinessWorker:15102] exit with status 64000
+2018-02-08 18:00:58 pid:15103 Error: Class 'App\IM\Timer' not found in /home/user/www/qianfen/server/Applications/IM/Events.php:87
+Stack trace:
+#0 [internal function]: App\IM\Events::onWorkerStart(Object(GatewayWorker\BusinessWorker))
+#1 /home/user/www/qianfen/server/vendor/workerman/gateway-worker/src/BusinessWorker.php(211): call_user_func('\\App\\IM\\Events:...', Object(GatewayWorker\BusinessWorker))
+#2 [internal function]: GatewayWorker\BusinessWorker->onWorkerStart(Object(GatewayWorker\BusinessWorker))
+#3 /home/user/www/qianfen/server/vendor/workerman/workerman/Worker.php(2081): call_user_func(Array, Object(GatewayWorker\BusinessWorker))
+#4 /home/user/www/qianfen/server/vendor/workerman/gateway-worker/src/BusinessWorker.php(190): Workerman\Worker->run()
+#5 /home/user/www/qianfen/server/vendor/workerman/workerman/Worker.php(1294): GatewayWorker\BusinessWorker->run()
+#6 /home/user/www/qianfen/server/vendor/workerman/workerman/Worker.php(1127): Workerman\Worker::forkOneWorkerForLinux(Object(GatewayWorker\BusinessWorker))
+#7 /home/user/www/qianfen/server/vendor/workerman/workerman/Worker.php(1100): Workerman\Worker::forkWorkersForLinux()
+#8 /home/user/www/qianfen/server/vendor/workerman/workerman/Worker.php(1426): Workerman\Worker::forkWorkers()
+#9 /home/user/www/qianfen/server/vendor/workerman/workerman/Worker.php(1375): Workerman\Worker::monitorWorkersForLinux()
+#10 /home/user/www/qianfen/server/vendor/workerman/workerman/Worker.php(461): Workerman\Worker::monitorWorkers()
+#11 /home/user/www/qianfen/server/Core/Application.php(24): Workerman\Worker::runAll()
+#12 /home/user/www/qianfen/server/vendor/bootstrap.php(20): Core\Application::run()
+#13 /home/user/www/qianfen/server/start.php(12): require('/home/user/www/...')
+#14 {main}
+2018-02-08 18:00:59 pid:15103 Worker process terminated
+2018-02-08 18:00:59 pid:13655 worker[ChatBusinessWorker:15103] exit with status 64000
+2018-02-08 18:00:59 pid:15111 Error: Class 'App\IM\Timer' not found in /home/user/www/qianfen/server/Applications/IM/Events.php:87
+Stack trace:
+#0 [internal function]: App\IM\Events::onWorkerStart(Object(GatewayWorker\BusinessWorker))
+#1 /home/user/www/qianfen/server/vendor/workerman/gateway-worker/src/BusinessWorker.php(211): call_user_func('\\App\\IM\\Events:...', Object(GatewayWorker\BusinessWorker))
+#2 [internal function]: GatewayWorker\BusinessWorker->onWorkerStart(Object(GatewayWorker\BusinessWorker))
+#3 /home/user/www/qianfen/server/vendor/workerman/workerman/Worker.php(2081): call_user_func(Array, Object(GatewayWorker\BusinessWorker))
+#4 /home/user/www/qianfen/server/vendor/workerman/gateway-worker/src/BusinessWorker.php(190): Workerman\Worker->run()
+#5 /home/user/www/qianfen/server/vendor/workerman/workerman/Worker.php(1294): GatewayWorker\BusinessWorker->run()
+#6 /home/user/www/qianfen/server/vendor/workerman/workerman/Worker.php(1127): Workerman\Worker::forkOneWorkerForLinux(Object(GatewayWorker\BusinessWorker))
+#7 /home/user/www/qianfen/server/vendor/workerman/workerman/Worker.php(1100): Workerman\Worker::forkWorkersForLinux()
+#8 /home/user/www/qianfen/server/vendor/workerman/workerman/Worker.php(1426): Workerman\Worker::forkWorkers()
+#9 /home/user/www/qianfen/server/vendor/workerman/workerman/Worker.php(1375): Workerman\Worker::monitorWorkersForLinux()
+#10 /home/user/www/qianfen/server/vendor/workerman/workerman/Worker.php(461): Workerman\Worker::monitorWorkers()
+#11 /home/user/www/qianfen/server/Core/Application.php(24): Workerman\Worker::runAll()
+#12 /home/user/www/qianfen/server/vendor/bootstrap.php(20): Core\Application::run()
+#13 /home/user/www/qianfen/server/start.php(12): require('/home/user/www/...')
+#14 {main}
+2018-02-08 18:01:00 pid:15111 Worker process terminated
+2018-02-08 18:01:00 pid:13655 worker[ChatBusinessWorker:15111] exit with status 64000
+2018-02-08 18:01:00 pid:15112 Error: Class 'App\IM\Timer' not found in /home/user/www/qianfen/server/Applications/IM/Events.php:87
+Stack trace:
+#0 [internal function]: App\IM\Events::onWorkerStart(Object(GatewayWorker\BusinessWorker))
+#1 /home/user/www/qianfen/server/vendor/workerman/gateway-worker/src/BusinessWorker.php(211): call_user_func('\\App\\IM\\Events:...', Object(GatewayWorker\BusinessWorker))
+#2 [internal function]: GatewayWorker\BusinessWorker->onWorkerStart(Object(GatewayWorker\BusinessWorker))
+#3 /home/user/www/qianfen/server/vendor/workerman/workerman/Worker.php(2081): call_user_func(Array, Object(GatewayWorker\BusinessWorker))
+#4 /home/user/www/qianfen/server/vendor/workerman/gateway-worker/src/BusinessWorker.php(190): Workerman\Worker->run()
+#5 /home/user/www/qianfen/server/vendor/workerman/workerman/Worker.php(1294): GatewayWorker\BusinessWorker->run()
+#6 /home/user/www/qianfen/server/vendor/workerman/workerman/Worker.php(1127): Workerman\Worker::forkOneWorkerForLinux(Object(GatewayWorker\BusinessWorker))
+#7 /home/user/www/qianfen/server/vendor/workerman/workerman/Worker.php(1100): Workerman\Worker::forkWorkersForLinux()
+#8 /home/user/www/qianfen/server/vendor/workerman/workerman/Worker.php(1426): Workerman\Worker::forkWorkers()
+#9 /home/user/www/qianfen/server/vendor/workerman/workerman/Worker.php(1375): Workerman\Worker::monitorWorkersForLinux()
+#10 /home/user/www/qianfen/server/vendor/workerman/workerman/Worker.php(461): Workerman\Worker::monitorWorkers()
+#11 /home/user/www/qianfen/server/Core/Application.php(24): Workerman\Worker::runAll()
+#12 /home/user/www/qianfen/server/vendor/bootstrap.php(20): Core\Application::run()
+#13 /home/user/www/qianfen/server/start.php(12): require('/home/user/www/...')
+#14 {main}
+2018-02-08 18:01:01 pid:15112 Worker process terminated
+2018-02-08 18:01:01 pid:13655 worker[ChatBusinessWorker:15112] exit with status 64000
+2018-02-08 18:01:01 pid:15113 Error: Class 'App\IM\Timer' not found in /home/user/www/qianfen/server/Applications/IM/Events.php:87
+Stack trace:
+#0 [internal function]: App\IM\Events::onWorkerStart(Object(GatewayWorker\BusinessWorker))
+#1 /home/user/www/qianfen/server/vendor/workerman/gateway-worker/src/BusinessWorker.php(211): call_user_func('\\App\\IM\\Events:...', Object(GatewayWorker\BusinessWorker))
+#2 [internal function]: GatewayWorker\BusinessWorker->onWorkerStart(Object(GatewayWorker\BusinessWorker))
+#3 /home/user/www/qianfen/server/vendor/workerman/workerman/Worker.php(2081): call_user_func(Array, Object(GatewayWorker\BusinessWorker))
+#4 /home/user/www/qianfen/server/vendor/workerman/gateway-worker/src/BusinessWorker.php(190): Workerman\Worker->run()
+#5 /home/user/www/qianfen/server/vendor/workerman/workerman/Worker.php(1294): GatewayWorker\BusinessWorker->run()
+#6 /home/user/www/qianfen/server/vendor/workerman/workerman/Worker.php(1127): Workerman\Worker::forkOneWorkerForLinux(Object(GatewayWorker\BusinessWorker))
+#7 /home/user/www/qianfen/server/vendor/workerman/workerman/Worker.php(1100): Workerman\Worker::forkWorkersForLinux()
+#8 /home/user/www/qianfen/server/vendor/workerman/workerman/Worker.php(1426): Workerman\Worker::forkWorkers()
+#9 /home/user/www/qianfen/server/vendor/workerman/workerman/Worker.php(1375): Workerman\Worker::monitorWorkersForLinux()
+#10 /home/user/www/qianfen/server/vendor/workerman/workerman/Worker.php(461): Workerman\Worker::monitorWorkers()
+#11 /home/user/www/qianfen/server/Core/Application.php(24): Workerman\Worker::runAll()
+#12 /home/user/www/qianfen/server/vendor/bootstrap.php(20): Core\Application::run()
+#13 /home/user/www/qianfen/server/start.php(12): require('/home/user/www/...')
+#14 {main}
+2018-02-08 18:01:02 pid:15113 Worker process terminated
+2018-02-08 18:01:02 pid:13655 worker[ChatBusinessWorker:15113] exit with status 64000
+2018-02-08 18:01:02 pid:15114 Error: Class 'App\IM\Timer' not found in /home/user/www/qianfen/server/Applications/IM/Events.php:87
+Stack trace:
+#0 [internal function]: App\IM\Events::onWorkerStart(Object(GatewayWorker\BusinessWorker))
+#1 /home/user/www/qianfen/server/vendor/workerman/gateway-worker/src/BusinessWorker.php(211): call_user_func('\\App\\IM\\Events:...', Object(GatewayWorker\BusinessWorker))
+#2 [internal function]: GatewayWorker\BusinessWorker->onWorkerStart(Object(GatewayWorker\BusinessWorker))
+#3 /home/user/www/qianfen/server/vendor/workerman/workerman/Worker.php(2081): call_user_func(Array, Object(GatewayWorker\BusinessWorker))
+#4 /home/user/www/qianfen/server/vendor/workerman/gateway-worker/src/BusinessWorker.php(190): Workerman\Worker->run()
+#5 /home/user/www/qianfen/server/vendor/workerman/workerman/Worker.php(1294): GatewayWorker\BusinessWorker->run()
+#6 /home/user/www/qianfen/server/vendor/workerman/workerman/Worker.php(1127): Workerman\Worker::forkOneWorkerForLinux(Object(GatewayWorker\BusinessWorker))
+#7 /home/user/www/qianfen/server/vendor/workerman/workerman/Worker.php(1100): Workerman\Worker::forkWorkersForLinux()
+#8 /home/user/www/qianfen/server/vendor/workerman/workerman/Worker.php(1426): Workerman\Worker::forkWorkers()
+#9 /home/user/www/qianfen/server/vendor/workerman/workerman/Worker.php(1375): Workerman\Worker::monitorWorkersForLinux()
+#10 /home/user/www/qianfen/server/vendor/workerman/workerman/Worker.php(461): Workerman\Worker::monitorWorkers()
+#11 /home/user/www/qianfen/server/Core/Application.php(24): Workerman\Worker::runAll()
+#12 /home/user/www/qianfen/server/vendor/bootstrap.php(20): Core\Application::run()
+#13 /home/user/www/qianfen/server/start.php(12): require('/home/user/www/...')
+#14 {main}
+2018-02-08 18:01:03 pid:15114 Worker process terminated
+2018-02-08 18:01:03 pid:13655 worker[ChatBusinessWorker:15114] exit with status 64000
+2018-02-08 18:01:03 pid:15115 Error: Class 'App\IM\Timer' not found in /home/user/www/qianfen/server/Applications/IM/Events.php:87
+Stack trace:
+#0 [internal function]: App\IM\Events::onWorkerStart(Object(GatewayWorker\BusinessWorker))
+#1 /home/user/www/qianfen/server/vendor/workerman/gateway-worker/src/BusinessWorker.php(211): call_user_func('\\App\\IM\\Events:...', Object(GatewayWorker\BusinessWorker))
+#2 [internal function]: GatewayWorker\BusinessWorker->onWorkerStart(Object(GatewayWorker\BusinessWorker))
+#3 /home/user/www/qianfen/server/vendor/workerman/workerman/Worker.php(2081): call_user_func(Array, Object(GatewayWorker\BusinessWorker))
+#4 /home/user/www/qianfen/server/vendor/workerman/gateway-worker/src/BusinessWorker.php(190): Workerman\Worker->run()
+#5 /home/user/www/qianfen/server/vendor/workerman/workerman/Worker.php(1294): GatewayWorker\BusinessWorker->run()
+#6 /home/user/www/qianfen/server/vendor/workerman/workerman/Worker.php(1127): Workerman\Worker::forkOneWorkerForLinux(Object(GatewayWorker\BusinessWorker))
+#7 /home/user/www/qianfen/server/vendor/workerman/workerman/Worker.php(1100): Workerman\Worker::forkWorkersForLinux()
+#8 /home/user/www/qianfen/server/vendor/workerman/workerman/Worker.php(1426): Workerman\Worker::forkWorkers()
+#9 /home/user/www/qianfen/server/vendor/workerman/workerman/Worker.php(1375): Workerman\Worker::monitorWorkersForLinux()
+#10 /home/user/www/qianfen/server/vendor/workerman/workerman/Worker.php(461): Workerman\Worker::monitorWorkers()
+#11 /home/user/www/qianfen/server/Core/Application.php(24): Workerman\Worker::runAll()
+#12 /home/user/www/qianfen/server/vendor/bootstrap.php(20): Core\Application::run()
+#13 /home/user/www/qianfen/server/start.php(12): require('/home/user/www/...')
+#14 {main}
+2018-02-08 18:01:04 pid:15115 Worker process terminated
+2018-02-08 18:01:04 pid:13655 worker[ChatBusinessWorker:15115] exit with status 64000
+2018-02-08 18:01:04 pid:15117 Error: Class 'App\IM\Timer' not found in /home/user/www/qianfen/server/Applications/IM/Events.php:87
+Stack trace:
+#0 [internal function]: App\IM\Events::onWorkerStart(Object(GatewayWorker\BusinessWorker))
+#1 /home/user/www/qianfen/server/vendor/workerman/gateway-worker/src/BusinessWorker.php(211): call_user_func('\\App\\IM\\Events:...', Object(GatewayWorker\BusinessWorker))
+#2 [internal function]: GatewayWorker\BusinessWorker->onWorkerStart(Object(GatewayWorker\BusinessWorker))
+#3 /home/user/www/qianfen/server/vendor/workerman/workerman/Worker.php(2081): call_user_func(Array, Object(GatewayWorker\BusinessWorker))
+#4 /home/user/www/qianfen/server/vendor/workerman/gateway-worker/src/BusinessWorker.php(190): Workerman\Worker->run()
+#5 /home/user/www/qianfen/server/vendor/workerman/workerman/Worker.php(1294): GatewayWorker\BusinessWorker->run()
+#6 /home/user/www/qianfen/server/vendor/workerman/workerman/Worker.php(1127): Workerman\Worker::forkOneWorkerForLinux(Object(GatewayWorker\BusinessWorker))
+#7 /home/user/www/qianfen/server/vendor/workerman/workerman/Worker.php(1100): Workerman\Worker::forkWorkersForLinux()
+#8 /home/user/www/qianfen/server/vendor/workerman/workerman/Worker.php(1426): Workerman\Worker::forkWorkers()
+#9 /home/user/www/qianfen/server/vendor/workerman/workerman/Worker.php(1375): Workerman\Worker::monitorWorkersForLinux()
+#10 /home/user/www/qianfen/server/vendor/workerman/workerman/Worker.php(461): Workerman\Worker::monitorWorkers()
+#11 /home/user/www/qianfen/server/Core/Application.php(24): Workerman\Worker::runAll()
+#12 /home/user/www/qianfen/server/vendor/bootstrap.php(20): Core\Application::run()
+#13 /home/user/www/qianfen/server/start.php(12): require('/home/user/www/...')
+#14 {main}
+2018-02-08 18:01:05 pid:15117 Worker process terminated
+2018-02-08 18:01:05 pid:13655 worker[ChatBusinessWorker:15117] exit with status 64000
+2018-02-08 18:01:05 pid:15118 Error: Class 'App\IM\Timer' not found in /home/user/www/qianfen/server/Applications/IM/Events.php:87
+Stack trace:
+#0 [internal function]: App\IM\Events::onWorkerStart(Object(GatewayWorker\BusinessWorker))
+#1 /home/user/www/qianfen/server/vendor/workerman/gateway-worker/src/BusinessWorker.php(211): call_user_func('\\App\\IM\\Events:...', Object(GatewayWorker\BusinessWorker))
+#2 [internal function]: GatewayWorker\BusinessWorker->onWorkerStart(Object(GatewayWorker\BusinessWorker))
+#3 /home/user/www/qianfen/server/vendor/workerman/workerman/Worker.php(2081): call_user_func(Array, Object(GatewayWorker\BusinessWorker))
+#4 /home/user/www/qianfen/server/vendor/workerman/gateway-worker/src/BusinessWorker.php(190): Workerman\Worker->run()
+#5 /home/user/www/qianfen/server/vendor/workerman/workerman/Worker.php(1294): GatewayWorker\BusinessWorker->run()
+#6 /home/user/www/qianfen/server/vendor/workerman/workerman/Worker.php(1127): Workerman\Worker::forkOneWorkerForLinux(Object(GatewayWorker\BusinessWorker))
+#7 /home/user/www/qianfen/server/vendor/workerman/workerman/Worker.php(1100): Workerman\Worker::forkWorkersForLinux()
+#8 /home/user/www/qianfen/server/vendor/workerman/workerman/Worker.php(1426): Workerman\Worker::forkWorkers()
+#9 /home/user/www/qianfen/server/vendor/workerman/workerman/Worker.php(1375): Workerman\Worker::monitorWorkersForLinux()
+#10 /home/user/www/qianfen/server/vendor/workerman/workerman/Worker.php(461): Workerman\Worker::monitorWorkers()
+#11 /home/user/www/qianfen/server/Core/Application.php(24): Workerman\Worker::runAll()
+#12 /home/user/www/qianfen/server/vendor/bootstrap.php(20): Core\Application::run()
+#13 /home/user/www/qianfen/server/start.php(12): require('/home/user/www/...')
+#14 {main}
+2018-02-08 18:01:06 pid:15118 Worker process terminated
+2018-02-08 18:01:06 pid:13655 worker[ChatBusinessWorker:15118] exit with status 64000
+2018-02-08 18:01:06 pid:15119 Error: Class 'App\IM\Timer' not found in /home/user/www/qianfen/server/Applications/IM/Events.php:87
+Stack trace:
+#0 [internal function]: App\IM\Events::onWorkerStart(Object(GatewayWorker\BusinessWorker))
+#1 /home/user/www/qianfen/server/vendor/workerman/gateway-worker/src/BusinessWorker.php(211): call_user_func('\\App\\IM\\Events:...', Object(GatewayWorker\BusinessWorker))
+#2 [internal function]: GatewayWorker\BusinessWorker->onWorkerStart(Object(GatewayWorker\BusinessWorker))
+#3 /home/user/www/qianfen/server/vendor/workerman/workerman/Worker.php(2081): call_user_func(Array, Object(GatewayWorker\BusinessWorker))
+#4 /home/user/www/qianfen/server/vendor/workerman/gateway-worker/src/BusinessWorker.php(190): Workerman\Worker->run()
+#5 /home/user/www/qianfen/server/vendor/workerman/workerman/Worker.php(1294): GatewayWorker\BusinessWorker->run()
+#6 /home/user/www/qianfen/server/vendor/workerman/workerman/Worker.php(1127): Workerman\Worker::forkOneWorkerForLinux(Object(GatewayWorker\BusinessWorker))
+#7 /home/user/www/qianfen/server/vendor/workerman/workerman/Worker.php(1100): Workerman\Worker::forkWorkersForLinux()
+#8 /home/user/www/qianfen/server/vendor/workerman/workerman/Worker.php(1426): Workerman\Worker::forkWorkers()
+#9 /home/user/www/qianfen/server/vendor/workerman/workerman/Worker.php(1375): Workerman\Worker::monitorWorkersForLinux()
+#10 /home/user/www/qianfen/server/vendor/workerman/workerman/Worker.php(461): Workerman\Worker::monitorWorkers()
+#11 /home/user/www/qianfen/server/Core/Application.php(24): Workerman\Worker::runAll()
+#12 /home/user/www/qianfen/server/vendor/bootstrap.php(20): Core\Application::run()
+#13 /home/user/www/qianfen/server/start.php(12): require('/home/user/www/...')
+#14 {main}
+2018-02-08 18:01:06 pid:13658 Register auth timeout (127.0.0.1). See http://wiki.workerman.net/Error4 for detail
+2018-02-08 18:01:07 pid:15119 Worker process terminated
+2018-02-08 18:01:07 pid:13655 worker[ChatBusinessWorker:15119] exit with status 64000
+2018-02-08 18:01:07 pid:15120 Error: Class 'App\IM\Timer' not found in /home/user/www/qianfen/server/Applications/IM/Events.php:87
+Stack trace:
+#0 [internal function]: App\IM\Events::onWorkerStart(Object(GatewayWorker\BusinessWorker))
+#1 /home/user/www/qianfen/server/vendor/workerman/gateway-worker/src/BusinessWorker.php(211): call_user_func('\\App\\IM\\Events:...', Object(GatewayWorker\BusinessWorker))
+#2 [internal function]: GatewayWorker\BusinessWorker->onWorkerStart(Object(GatewayWorker\BusinessWorker))
+#3 /home/user/www/qianfen/server/vendor/workerman/workerman/Worker.php(2081): call_user_func(Array, Object(GatewayWorker\BusinessWorker))
+#4 /home/user/www/qianfen/server/vendor/workerman/gateway-worker/src/BusinessWorker.php(190): Workerman\Worker->run()
+#5 /home/user/www/qianfen/server/vendor/workerman/workerman/Worker.php(1294): GatewayWorker\BusinessWorker->run()
+#6 /home/user/www/qianfen/server/vendor/workerman/workerman/Worker.php(1127): Workerman\Worker::forkOneWorkerForLinux(Object(GatewayWorker\BusinessWorker))
+#7 /home/user/www/qianfen/server/vendor/workerman/workerman/Worker.php(1100): Workerman\Worker::forkWorkersForLinux()
+#8 /home/user/www/qianfen/server/vendor/workerman/workerman/Worker.php(1426): Workerman\Worker::forkWorkers()
+#9 /home/user/www/qianfen/server/vendor/workerman/workerman/Worker.php(1375): Workerman\Worker::monitorWorkersForLinux()
+#10 /home/user/www/qianfen/server/vendor/workerman/workerman/Worker.php(461): Workerman\Worker::monitorWorkers()
+#11 /home/user/www/qianfen/server/Core/Application.php(24): Workerman\Worker::runAll()
+#12 /home/user/www/qianfen/server/vendor/bootstrap.php(20): Core\Application::run()
+#13 /home/user/www/qianfen/server/start.php(12): require('/home/user/www/...')
+#14 {main}
+2018-02-08 18:01:08 pid:13658 Register auth timeout (127.0.0.1). See http://wiki.workerman.net/Error4 for detail
+2018-02-08 18:01:08 pid:15120 Worker process terminated
+2018-02-08 18:01:08 pid:13655 worker[ChatBusinessWorker:15120] exit with status 64000
+2018-02-08 18:01:08 pid:15122 Error: Class 'App\IM\Timer' not found in /home/user/www/qianfen/server/Applications/IM/Events.php:87
+Stack trace:
+#0 [internal function]: App\IM\Events::onWorkerStart(Object(GatewayWorker\BusinessWorker))
+#1 /home/user/www/qianfen/server/vendor/workerman/gateway-worker/src/BusinessWorker.php(211): call_user_func('\\App\\IM\\Events:...', Object(GatewayWorker\BusinessWorker))
+#2 [internal function]: GatewayWorker\BusinessWorker->onWorkerStart(Object(GatewayWorker\BusinessWorker))
+#3 /home/user/www/qianfen/server/vendor/workerman/workerman/Worker.php(2081): call_user_func(Array, Object(GatewayWorker\BusinessWorker))
+#4 /home/user/www/qianfen/server/vendor/workerman/gateway-worker/src/BusinessWorker.php(190): Workerman\Worker->run()
+#5 /home/user/www/qianfen/server/vendor/workerman/workerman/Worker.php(1294): GatewayWorker\BusinessWorker->run()
+#6 /home/user/www/qianfen/server/vendor/workerman/workerman/Worker.php(1127): Workerman\Worker::forkOneWorkerForLinux(Object(GatewayWorker\BusinessWorker))
+#7 /home/user/www/qianfen/server/vendor/workerman/workerman/Worker.php(1100): Workerman\Worker::forkWorkersForLinux()
+#8 /home/user/www/qianfen/server/vendor/workerman/workerman/Worker.php(1426): Workerman\Worker::forkWorkers()
+#9 /home/user/www/qianfen/server/vendor/workerman/workerman/Worker.php(1375): Workerman\Worker::monitorWorkersForLinux()
+#10 /home/user/www/qianfen/server/vendor/workerman/workerman/Worker.php(461): Workerman\Worker::monitorWorkers()
+#11 /home/user/www/qianfen/server/Core/Application.php(24): Workerman\Worker::runAll()
+#12 /home/user/www/qianfen/server/vendor/bootstrap.php(20): Core\Application::run()
+#13 /home/user/www/qianfen/server/start.php(12): require('/home/user/www/...')
+#14 {main}
+2018-02-08 18:01:09 pid:13658 Register auth timeout (127.0.0.1). See http://wiki.workerman.net/Error4 for detail
+2018-02-08 18:01:09 pid:15122 Worker process terminated
+2018-02-08 18:01:09 pid:13655 worker[ChatBusinessWorker:15122] exit with status 64000
+2018-02-08 18:01:09 pid:15123 Error: Class 'App\IM\Timer' not found in /home/user/www/qianfen/server/Applications/IM/Events.php:87
+Stack trace:
+#0 [internal function]: App\IM\Events::onWorkerStart(Object(GatewayWorker\BusinessWorker))
+#1 /home/user/www/qianfen/server/vendor/workerman/gateway-worker/src/BusinessWorker.php(211): call_user_func('\\App\\IM\\Events:...', Object(GatewayWorker\BusinessWorker))
+#2 [internal function]: GatewayWorker\BusinessWorker->onWorkerStart(Object(GatewayWorker\BusinessWorker))
+#3 /home/user/www/qianfen/server/vendor/workerman/workerman/Worker.php(2081): call_user_func(Array, Object(GatewayWorker\BusinessWorker))
+#4 /home/user/www/qianfen/server/vendor/workerman/gateway-worker/src/BusinessWorker.php(190): Workerman\Worker->run()
+#5 /home/user/www/qianfen/server/vendor/workerman/workerman/Worker.php(1294): GatewayWorker\BusinessWorker->run()
+#6 /home/user/www/qianfen/server/vendor/workerman/workerman/Worker.php(1127): Workerman\Worker::forkOneWorkerForLinux(Object(GatewayWorker\BusinessWorker))
+#7 /home/user/www/qianfen/server/vendor/workerman/workerman/Worker.php(1100): Workerman\Worker::forkWorkersForLinux()
+#8 /home/user/www/qianfen/server/vendor/workerman/workerman/Worker.php(1426): Workerman\Worker::forkWorkers()
+#9 /home/user/www/qianfen/server/vendor/workerman/workerman/Worker.php(1375): Workerman\Worker::monitorWorkersForLinux()
+#10 /home/user/www/qianfen/server/vendor/workerman/workerman/Worker.php(461): Workerman\Worker::monitorWorkers()
+#11 /home/user/www/qianfen/server/Core/Application.php(24): Workerman\Worker::runAll()
+#12 /home/user/www/qianfen/server/vendor/bootstrap.php(20): Core\Application::run()
+#13 /home/user/www/qianfen/server/start.php(12): require('/home/user/www/...')
+#14 {main}
+2018-02-08 18:01:10 pid:13658 Register auth timeout (127.0.0.1). See http://wiki.workerman.net/Error4 for detail
+2018-02-08 18:01:10 pid:15123 Worker process terminated
+2018-02-08 18:01:10 pid:13655 worker[ChatBusinessWorker:15123] exit with status 64000
+2018-02-08 18:01:10 pid:15124 Error: Class 'App\IM\Timer' not found in /home/user/www/qianfen/server/Applications/IM/Events.php:87
+Stack trace:
+#0 [internal function]: App\IM\Events::onWorkerStart(Object(GatewayWorker\BusinessWorker))
+#1 /home/user/www/qianfen/server/vendor/workerman/gateway-worker/src/BusinessWorker.php(211): call_user_func('\\App\\IM\\Events:...', Object(GatewayWorker\BusinessWorker))
+#2 [internal function]: GatewayWorker\BusinessWorker->onWorkerStart(Object(GatewayWorker\BusinessWorker))
+#3 /home/user/www/qianfen/server/vendor/workerman/workerman/Worker.php(2081): call_user_func(Array, Object(GatewayWorker\BusinessWorker))
+#4 /home/user/www/qianfen/server/vendor/workerman/gateway-worker/src/BusinessWorker.php(190): Workerman\Worker->run()
+#5 /home/user/www/qianfen/server/vendor/workerman/workerman/Worker.php(1294): GatewayWorker\BusinessWorker->run()
+#6 /home/user/www/qianfen/server/vendor/workerman/workerman/Worker.php(1127): Workerman\Worker::forkOneWorkerForLinux(Object(GatewayWorker\BusinessWorker))
+#7 /home/user/www/qianfen/server/vendor/workerman/workerman/Worker.php(1100): Workerman\Worker::forkWorkersForLinux()
+#8 /home/user/www/qianfen/server/vendor/workerman/workerman/Worker.php(1426): Workerman\Worker::forkWorkers()
+#9 /home/user/www/qianfen/server/vendor/workerman/workerman/Worker.php(1375): Workerman\Worker::monitorWorkersForLinux()
+#10 /home/user/www/qianfen/server/vendor/workerman/workerman/Worker.php(461): Workerman\Worker::monitorWorkers()
+#11 /home/user/www/qianfen/server/Core/Application.php(24): Workerman\Worker::runAll()
+#12 /home/user/www/qianfen/server/vendor/bootstrap.php(20): Core\Application::run()
+#13 /home/user/www/qianfen/server/start.php(12): require('/home/user/www/...')
+#14 {main}
+2018-02-08 18:01:10 pid:13655 Workerman[start.php] reloading
+2018-02-08 18:01:10 pid:15124 Worker process terminated
+2018-02-08 18:01:10 pid:13655 worker[ChatBusinessWorker:15124] exit with status 64000
+2018-02-08 18:01:11 pid:13658 Register auth timeout (127.0.0.1). See http://wiki.workerman.net/Error4 for detail
+2018-02-08 18:01:12 pid:13658 Register auth timeout (127.0.0.1). See http://wiki.workerman.net/Error4 for detail
+2018-02-08 18:01:13 pid:13658 Register auth timeout (127.0.0.1). See http://wiki.workerman.net/Error4 for detail
+2018-02-08 18:01:14 pid:13658 Register auth timeout (127.0.0.1). See http://wiki.workerman.net/Error4 for detail
+2018-02-08 18:01:15 pid:13658 Register auth timeout (127.0.0.1). See http://wiki.workerman.net/Error4 for detail
+2018-02-08 18:01:16 pid:13658 Register auth timeout (127.0.0.1). See http://wiki.workerman.net/Error4 for detail
+2018-02-08 18:01:17 pid:13658 Register auth timeout (127.0.0.1). See http://wiki.workerman.net/Error4 for detail
+2018-02-08 18:01:18 pid:13658 Register auth timeout (127.0.0.1). See http://wiki.workerman.net/Error4 for detail
+2018-02-08 18:01:19 pid:13658 Register auth timeout (127.0.0.1). See http://wiki.workerman.net/Error4 for detail
+2018-02-08 18:01:20 pid:13658 Register auth timeout (127.0.0.1). See http://wiki.workerman.net/Error4 for detail
+2018-02-08 18:01:22 pid:13655 Workerman[start.php] reloading
+2018-02-08 18:02:00 pid:13655 Workerman[start.php] reloading
+2018-02-08 18:02:01 pid:13655 Workerman[start.php] stopping ...
+2018-02-08 18:02:01 pid:13655 Workerman[start.php] has been stopped
+2018-02-08 18:02:03 pid:15156 Workerman[start.php] start in DEBUG mode
+2018-02-08 18:02:04 pid:15156 Workerman[start.php] reloading
+2018-02-08 18:02:06 pid:15156 Workerman[start.php] reloading
+2018-02-08 18:02:08 pid:15156 worker[ChatBusinessWorker:15162] exit with status 9
+2018-02-08 18:03:43 pid:15156 Workerman[start.php] stopping ...
+2018-02-08 18:03:43 pid:15156 Workerman[start.php] has been stopped
