@@ -12,6 +12,8 @@
  * @license http://www.opensource.org/licenses/mit-license.php MIT License
  */
 
+namespace App\IM;
+
 /**
  * 用于检测业务代码死循环或者长时间阻塞等问题
  * 如果发现业务卡死，可以将下面declare打开（去掉//注释），并执行php start.php reload
@@ -23,7 +25,6 @@
  * 聊天主逻辑
  * 主要是处理 onMessage onClose
  */
-namespace App\IM;
 
 use App\Actions\Player;
 use APP\Actions\Room;

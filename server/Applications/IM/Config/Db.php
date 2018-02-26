@@ -1,5 +1,11 @@
 <?php 
 namespace  Config;
+
+/**
+ * 数据库配置
+ * Class Db
+ * @package Config
+ */
 class Db{
     public static $db_conf = array(
         'host'     => '127.0.0.1',
