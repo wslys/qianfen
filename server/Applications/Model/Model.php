@@ -9,7 +9,6 @@
 namespace App\Model;
 
 use App\IM\Events;
-use Exception;
 
 class Model
 {
@@ -17,7 +16,7 @@ class Model
 
     public static function init() {}
 
-    public static function setTable($table='') {
+    public static function setTable($table = '') {
         self::$table = isset($table)?$table:self::$table;
     }
 
@@ -137,37 +136,5 @@ class Model
         return $result['num'];
     }
 
-
-    /**
-     * TODO 如果使用类的实例调用$method，但$method方法不是公有的，就会触发此函数。
-     * @param $method
-     * @param $args
-     * @return mixed
-     * @throws Exception
-     */
-    public function __call($method, $args) {
-        echo "\njinru=============================1\n";
-        // 检查是否存在方法$method
-        if (method_exists($this, $method)) {
-            echo "\njinru=============================2\n";
-            $before_method = '__' + $method;
-            // 检查是否存在方法$before_method
-            if (method_exists($this, $before_method)) {
-                echo "\njinru=============================3\n";
-                // 调用$before_method，检查其返回值，决定是否跳过函数执行
-                if (call_user_func_array(array($this, $before_method), $args)) {
-                    echo "\njinru=============================4\n";
-                    return call_user_func_array(array($this, $method), $args);
-                }
-            } else {
-                echo "\njinru=============================5\n";
-                // $before_method不存在，直接执行函数
-                return call_user_func_array(array($this, $method), $args);
-            }
-        } else {
-            echo "\njinru=============================6\n";
-            throw new Exception('no such method ' . $method);
-        }
-    }
 }
 
