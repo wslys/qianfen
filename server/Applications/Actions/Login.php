@@ -13,6 +13,7 @@ class Login {
             return;
 		}
         self::success($user, $client_id);
+        Gateway::bindUid($client_id, $user['id']);
 		return;
 	}
 
@@ -47,8 +48,6 @@ class Login {
 
 
     private static function success($client_id, $user) {
-        Gateway::bindUid($client_id, $user['id']);
-
         $_SESSION['uid']        = $user['id'];
         $_SESSION['user_id']    = $user['id'];
         $_SESSION['open_id']    = $user['open_id'];
