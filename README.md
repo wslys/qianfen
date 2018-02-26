@@ -16,4 +16,11 @@
         
     cd server/
         
+    开始
     php start.php start
+    
+    重启
+    php start.php restart
+    
+    重载
+    php start.php restart
