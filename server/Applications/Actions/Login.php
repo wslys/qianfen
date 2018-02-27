@@ -12,27 +12,28 @@ class Login {
 			Msg::error($client_id, '登陆失败,请重试！');
             return;
 		}
-        self::success($user, $client_id);
+        self::loginSuccess($client_id, $user);
 		return;
 	}
 
 	public static function logout($client_id) {
+	    // session 无须自动维护
         Gateway::closeClient($client_id);
     }
 
 	public static function register($client_id, $data) {
         $user = User::findOne(['open_id'=>$data['open_id']]);
         if ($user) {
-            self::success($user, $client_id);
+            self::loginSuccess($user, $client_id);
             return;
         }
 
         $insert_id = self::insert_user($data);
         if (!$insert_id) {
-            Msg::error($client_id, '注册失败， 请重试!');
+            Msg::message($client_id, 1231, 'register error', '注册失败， 请重试!');
         }else {
             $user = User::findOne(['open_id'=>$data['open_id']]);
-            self::success($user, $client_id);
+            self::loginSuccess($user, $client_id);
         }
         return;
     }
@@ -46,7 +47,7 @@ class Login {
     }
 
 
-    private static function success($client_id, $user) {
+    private static function loginSuccess($client_id, $user) {
         Gateway::bindUid($client_id, $user['id']);
 
         $_SESSION['uid']        = $user['id'];
@@ -63,7 +64,7 @@ class Login {
         $_SESSION['update_at']  = $user['update_at'];
 
         // 玩家状态, 1：登陆游戏、 2：匹配中、 3：准备中、 4：游戏中
-        $_SESSION['player_status'] = 2;
+        $_SESSION['player_status'] = 1;
 
         Gateway::sendToUid($user['id'], json_encode([
             "code" => 0,

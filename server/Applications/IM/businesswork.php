@@ -21,7 +21,7 @@ $worker->name = 'ChatBusinessWorker';
 // bussinessWorker进程数量
 $worker->count = 1;
 // 服务注册地址
-$worker->registerAddress = '127.0.0.1:1236';
+$worker->registerAddress = '0.0.0.0:1236';
 //#$worker->eventHandler = 'my';
 $worker->eventHandler = '\App\IM\Events';
 

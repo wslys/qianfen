@@ -51,13 +51,11 @@ class Game
      */
     public $is_line_room_list = [];
 
-
-/*蓝队
-红队
-
-The blue team
-The red team*/
-
+    /**
+     * 蓝队 The blue team
+     * 红队 The red team
+     * Game constructor.
+     */
     public function __construct() {
         $this->hall = new Hall();
         $this->matching = new Matching();
@@ -69,6 +67,22 @@ The red team*/
         //$this->matching();
     }
 
+    public function go() {
+        echo "\n game start go go go go >>>>>> \n";
+
+        // 1. 匹配
+        $this->get_matching_user_list();
+
+        // TODO
+        // $this->matching();
+
+        // 2. 清理
+
+        // 3.
+
+        // 4.
+    }
+
     /**
      * TODO 需要细细构思
      * @return bool
@@ -77,7 +91,7 @@ The red team*/
         if ($this->matching_user_list < 4) return false;
 
         $len = count($this->matching_user_list);
-        $len = floor($len);
+        $len = floor($len); // 取整
 
         $group_arr = [];
         for ($i=0; $i<$len; $i++) {
@@ -87,6 +101,12 @@ The red team*/
             }
             $group_arr[] = $arr;
         }
+
+        // 匹配组已分配好
+
+        // 写入redis中
+
+        //
     }
 
     /**

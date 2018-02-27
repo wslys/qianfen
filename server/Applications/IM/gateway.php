@@ -15,7 +15,7 @@ use Workerman\Worker;
 use GatewayWorker\Gateway;
 
 // gateway 进程
-$gateway = new Gateway("Websocket://127.0.0.1:7272");
+$gateway = new Gateway("Websocket://0.0.0.0:7272");
 
 // 设置名称，方便status时查看
 $gateway->name = 'ChatGateway';
@@ -23,8 +23,8 @@ $gateway->name = 'ChatGateway';
 // 设置进程数，gateway进程数建议与cpu核数相同
 $gateway->count = 1;
 
-// 分布式部署时请设置成内网ip（非127.0.0.1）
-$gateway->lanIp = '127.0.0.1';
+// 分布式部署时请设置成内网ip（非0.0.0.0）
+$gateway->lanIp = '0.0.0.0';
 
 // 内部通讯起始端口，假如$gateway->count=4，起始端口为4000
 // 则一般会使用4000 4001 4002 4003 4个端口作为内部通讯端口 
@@ -37,7 +37,7 @@ $gateway->pingInterval = 10;
 $gateway->pingData = '{"type":"ping"}';
 
 // 服务注册地址
-$gateway->registerAddress = '127.0.0.1:1236';
+$gateway->registerAddress = '0.0.0.0:1236';
 
 /* 
 // 当客户端连接上来时，设置连接的onWebSocketConnect，即在websocket握手时的回调

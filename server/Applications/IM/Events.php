@@ -90,10 +90,13 @@ class Events
         // init model TODO 初始化Model
         Init::init();
 
+        // 初始化
+        // self::$game->start();
+
         // TODO 监控游戏空间的状态：如匹配，开始，通知等......
-        Timer::add(3, function(){
-            self::$game->start();
-        });
+        /*Timer::add(3, function(){
+            self::$game->go();
+        });*/
     }
 
     /**

@@ -25,6 +25,18 @@ class Msg
         Gateway::sendToClient($client_id, json_encode($msg, true));
     }
 
+    public static function message($client_id, $code = 1230, $type = 'error', $msg = 'error', $msg_data) {
+        $msg = [
+            'code' => $code,
+            'type' => $type,
+            'msg'  => $msg,
+            'data' => [
+                'msg' => $msg_data
+            ]
+        ];
+        Gateway::sendToClient($client_id, json_encode($msg, true));
+    }
+
     /**
      * 房间密码错误
      * @param $client_id
