@@ -7,7 +7,7 @@
  */
 
 namespace App\Model;
-use \Redis;
+use Redis;
 
 /**
  * redis操作类
@@ -50,15 +50,15 @@ class MyRedis
     protected $port;
 
 
-    public function __construct($config, $attr=array())
+    public function __construct($config=[], $attr=array())
     {
         $this->attr  = array_merge($this->attr, $attr);
         $this->redis = new Redis();
-        $this->port  = $config['port'] ? $config['port'] : 6379;
-        $this->host  = $config['host'] ? $config['host'] : '127.0.0.1';
+        $this->port  = isset($config['port']) ? $config['port'] : 6379;
+        $this->host  = isset($config['host']) ? $config['host'] : '127.0.0.1';
         $this->redis->connect($this->host, $this->port, $this->attr['timeout']);
 
-        if($config['auth'])
+        if(isset($config['auth']))
         {
             $this->auth($config['auth']);
             $this->auth = $config['auth'];
@@ -253,6 +253,18 @@ class MyRedis
     public function hKeys($key)
     {
         return $this->redis->hKeys($key);
+    }
+
+    /**
+     * 写入所有hash表的字段值，为一个关联数组
+     * @param $key
+     * @param $vals
+     */
+    public function hSetAll($key, $vals)
+    {
+        foreach ($vals as $k=>$val) {
+            $this->hSet($key, $k, $val);
+        }
     }
 
     /**
@@ -565,7 +577,8 @@ class MyRedis
 
     /**
      * 得到一个key
-     * @param unknown $key
+     * @param $key
+     * @return bool|string
      */
     public function get($key)
     {
