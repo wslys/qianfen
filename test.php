@@ -6,6 +6,4 @@
  * Time: 上午1:58
  */
 
-phpinfo();
-
-
+echo rand(1, 2);

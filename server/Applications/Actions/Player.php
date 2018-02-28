@@ -51,7 +51,7 @@ class Player {
                 "act"  => "all_readyed",
                 "data" => [
                     "val"=>"all_readyed",
-                    "player"=>$room_clients
+                    "player"=>$room_clients // TODO [My team]
                 ]
             ]));
 
@@ -108,6 +108,7 @@ class Player {
         }
 
         Events::$game->stage_list[$group]->first_call_poker = $client_key;
+        Events::$game->stage_list[$group]->cursor = ($kty - 1);
         Gateway::sendToGroup($group, json_encode([
             "act"=>"call_poker",
             "data"=>[
@@ -126,6 +127,13 @@ class Player {
     public static function getPoker($client_id, $data) {
         $group = $data['data']['group'];
         $stage = Events::$game->stage_list[$group];
+        $get_poker_player = $stage->get_poker_player; // 当前拿牌者
+        $poker_list = $stage->poker_list; // 牌池
+
+        $players = $stage->players; // 4 名玩家
+        $players_client_id = $stage->players_client_id; // 4 名玩家 客户端ID
+
+
 
         Gateway::sendToGroup($group, json_encode($stage->players));
     }

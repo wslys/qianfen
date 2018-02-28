@@ -17,30 +17,36 @@ class Stage
 {
     // blue team score
     public $blue_score = 0;
-
     // red team score
     public $red_score  = 0;
 
-    public $players = []; // 4 名玩家
+    // 4 名玩家
+    public $players = [];
+    // 4 名玩家 客户端ID
+    public $players_client_id = [];
+    // 首次叫牌确定的初始拿牌者
+    public $first_call_poker = null;
+    // 庄家
+    public $banker_player    = null;
+    // 当前拿牌者
+    public $get_poker_player = 0;
+    // 游标
+    public $cursor = 0;
 
-    public $first_call_poker = null; // 首次叫牌确定的初始拿牌者
-
-    public $banker_player = null; // 庄家
-
-    public $start_getpoker_player = 0;
 
     // 牌池
     public $poker_list = [];
-
     // 拿牌列表
     public $take_poker_list = [];
-
     // 出牌列表
     public $out_poker_list = [];
 
     public function __construct($players)
     {
         $this->players = $players;
+        foreach ($this->players as $key => $player) {
+            array_push($this->players_client_id, $key);
+        }
         $this->init();
     }
 
@@ -57,3 +63,4 @@ class Stage
 
     }
 }
+
