@@ -21,11 +21,6 @@ namespace App\IM;
  */
 //declare(ticks=1);
 
-/**
- * 聊天主逻辑
- * 主要是处理 onMessage onClose
- */
-
 use App\Actions\Player;
 use APP\Actions\Room;
 use App\Game\Game;
@@ -81,7 +76,6 @@ class Events
         // 实例化Db
         // self::$db = Db::instance('chat');
         if (!isset(DbConfig::$db_conf)) {
-            echo "\\Config\\Db::\$db_conf not set\n";
             throw new Exception("\\Config\\Db::\$db_conf not set\n");
         }
         self::$db_conf = DbConfig::$db_conf;
@@ -108,6 +102,17 @@ class Events
     public static function onMessage($client_id, $message)
     {
         $data = json_decode($message, true);
+        if ($data['act'] != 'login') {
+            if (!$_SESSION['uid']) {
+                Gateway::sendToClient($client_id, json_encode([
+                    "act"  => "login",
+                    "code" => 101,
+                    "msg"  => "please login",
+                    "data" => []
+                ]));
+                return;
+            }
+        }
 
         switch ($data['act']) {
             case 'login':
@@ -131,11 +136,29 @@ class Events
             case 'ready':
                 Player::ready($client_id, $data);;
                 break;
+            case 'call_poker':
+                if (self::$game->stage_list[$data['data']['group']]->first_call_poker) {
+                    Gateway::sendToClient($client_id, json_encode([
+                        'act' => 'cal_poker',
+                        'code'=> 102,
+                        'msg' => '已经有人叫牌了，你不用重复叫牌',
+                        'data'=> [
+                            'val' => '',
+                            'self'=> $client_id
+                        ]
+                    ]));
+                    return;
+                }
+                Player::callPoker($client_id, $data);;
+                break;
             case 'start_game':
                 Player::startGame($client_id, $data);
                 break;
             case 'end_game':
                 Player::endGame($client_id, $data);
+                break;
+            case 'get_poker':
+                Player::getPoker($client_id, $data);
                 break;
         }
     }

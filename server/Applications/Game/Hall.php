@@ -13,6 +13,11 @@ namespace App\Game;
 class Hall
 {
     // 我的数据
-    // 活跃者
+    public $data = [];
+
+    // 在线者
+    public $players = [];
+
     // 风云榜
+    public $FY_LIST = [];
 }

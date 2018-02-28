@@ -6,6 +6,35 @@
     }
   },
 
+
+  {
+    "act" : "logout",
+    "data" : {}
+  },
+
+
+  {
+    "act" : "ready",
+    "data" : {
+      "group":"default"
+    }
+  },
+
+  {
+    "act" : "call_poker",
+    "data" : {
+      "group":"default"
+    }
+  },
+
+
+  {
+    "act" : "get_poker",
+    "data" : {
+      "group":"default"
+    }
+  },
+
   {
     "act" : "register",
     "data" : {

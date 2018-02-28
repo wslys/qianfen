@@ -71,7 +71,8 @@ class Login {
             "type" => "login",
             "msg"  => "success",
             "data" => [
-                "msg" => "登陆成功！可以继续啦."
+                "msg" => "login success!",
+                "client_id"=>$client_id
             ]
         ]));
     }

@@ -22,6 +22,16 @@ class Game
     public $matching = null;
 
     /**
+     * 舞台列表
+     * @var array
+     */
+    public $stage_list = [
+        [
+            'yysy','sghsdg','dshdyehs'
+        ]
+    ];
+
+    /**
      * 正在游戏中的玩家
      * @var array
      */
@@ -69,6 +79,11 @@ class Game
 
     public function go() {
         echo "\n game start go go go go >>>>>> \n";
+        // 获取所有在线玩家信息
+        $this->hall->players = Gateway::getAllClientSessions();
+
+        // TODO 风云榜 [查询数据库]
+        $this->hall->FY_LIST = [];
 
         // 1. 匹配
         $this->get_matching_user_list();
