@@ -22,6 +22,8 @@ class Stage
 
     // 4 名玩家
     public $players = [];
+    // 4 名玩家拿牌顺序
+    public $take_the_order_players = [];
     // 4 名玩家 客户端ID
     public $players_client_id = [];
     // 首次叫牌确定的初始拿牌者
@@ -59,8 +61,19 @@ class Stage
     }
 
     // xiayiju
-    public function next_game() {
+    public function next() {
 
+    }
+
+    /**
+     * 拿牌顺序
+     */
+    public function take_the_order() {
+        $fist_client = '';
+        if ($this->banker_player) {
+            $fist_client = $this->banker_player;
+        }
+        $this->take_the_order_players = [];
     }
 }
 

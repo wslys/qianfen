@@ -50,6 +50,7 @@ class Login {
     private static function loginSuccess($client_id, $user) {
         Gateway::bindUid($client_id, $user['id']);
 
+        $_SESSION['client_id']  = $client_id;
         $_SESSION['uid']        = $user['id'];
         $_SESSION['user_id']    = $user['id'];
         $_SESSION['open_id']    = $user['open_id'];
